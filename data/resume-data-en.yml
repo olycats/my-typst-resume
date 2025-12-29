@@ -1,0 +1,76 @@
+personal:
+  name: Stacy (Ko-Han) Lo
+  email: olycats@gmail.com
+  titles:
+    - Analytics Engineer
+    - IT Developer
+  contactitems:
+    location: Taoyuan, Taiwan
+    email: olycats@gmail.com
+    linkedin: linkedin.com/in/olycats
+
+summary: |
+    Analytics professional with 15 years of experience in *data* and *information technology*. Passionate about building *reliable data solutions* that enable self-service analytics. Known for *diving deep* into problems, *uncovering root causes* behind complex integration issues, and bridging the gap between business needs and technical implementation.
+
+work:
+  - company: Teamson
+    location: Taipei, Taiwan
+    startdate: Jul 2022
+    enddate: Sep 2025
+    duration: 3 yrs 3 mos
+    position: Senior Data Engineer (Analytics Engineering & IT Development)
+    highlights: 
+      - Led migration from legacy reporting to *Modern Data Stack* using *Stitch Data* and *dbt*, improving data reliability and consistency. Standardized business terminology across departments, strengthening organizational data culture.
+      - Played a key role in implementing *Docker*, *Rundeck*, and *GitHub Actions* to streamline development workflows. *Guided team members* in adopting new processes through clear documentation and hands-on support.
+      - Became the go-to expert for *SAP Business One*, recognized for deep understanding of both business processes and technical implementation. Provided *trusted recommendations* on system configuration, data management, and workflow optimization to support the business.
+
+  - company: MDF Instruments
+    location: Taipei, Taiwan (Remote)
+    startdate: Feb 2018
+    enddate: Jun 2022
+    duration: 4 yrs 5 mos
+    position: Data Analyst (Data Engineering & Business Intelligence)
+    highlights: 
+      - Managed all *eCommerce data projects* within a small (1-2 person) data team, delivering reports that *informed business decisions*.
+      - Developed and deployed *10+ data pipelines* integrating multiple sources, including web scraping, APIs, and FTP transfers, ensuring *consistent and timely data availability*.
+      - Built and maintained *transformed, analytics-ready datasets* for *Power BI*, enabling self-service reporting across the organization.
+
+  - company: NEC Taiwan
+    location: Taipei, Taiwan
+    startdate: Mar 2016
+    enddate: Nov 2017
+    duration: 1 yr 9 mos
+    position: Programmer (Technical Support & Maintenance)
+    highlights: 
+      - Developed and maintained the *POS system* for a 400-store retail chain, managing the *complete software development lifecycle* from design and development through deployment and maintenance.
+      - Provided *technical support* to hardware engineers, customer service agents, and end users via remote access and phone, resolving issues efficiently.
+      - Designed and executed *data migration* from the legacy system to the new platform, completing the transition on schedule.
+
+  - company: Azion Corporation
+    location: Taipei, Taiwan
+    startdate: Jun 2014
+    enddate: Mar 2016
+    duration: 1 yr 10 mos
+    position: Programmer (Full-Stack Development)
+    highlights: 
+      - Developed e-Loan lending system applications using *ASP.NET web forms (Visual Basic)*, contributing to team deliverables and project milestones.
+      - Worked with *Oracle* and *MS SQL* databases, and front-end technologies including *HTML*, *CSS*, and *JavaScript*, gaining practical experience across the full technology stack.
+      - Participated in multiple phases of the *software development lifecycle*, including development, system analysis, and user acceptance testing.
+
+  - company: momo.com Inc.
+    location: Taipei, Taiwan
+    startdate: Mar 2011
+    enddate: May 2014
+    duration: 3 yrs 3 mos
+    position: Data Analyst (Business Analytics & Reporting)
+    highlights: 
+      - Built automated business reports in *MS Excel spreadsheets* using *MS Access* and optimized *VBA* scripts, improving reporting efficiency and accuracy.
+      - Analyzed *retail chain performance* including store operations, marketing campaigns, and profitability metrics, identifying key trends and improvement opportunities.
+      - Performed *financial analysis*, identifying and explaining discrepancies between financial data and operational metrics with high accuracy, earning recognition from leadership.
+
+education:
+  - school: National Chengchi University
+    location: Taipei, Taiwan
+    startdate: Sep 2006
+    enddate: Jan 2011
+    description: Bachelor's degree in Statistics

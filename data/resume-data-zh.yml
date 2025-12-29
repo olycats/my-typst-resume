@@ -1,0 +1,76 @@
+personal:
+  name: 羅可涵 （Stacy Lo）
+  email: olycats@gmail.com
+  titles:
+    - Analytics Engineer
+    - IT Developer
+  contactitems:
+    location: 桃園市
+    email: olycats@gmail.com
+    linkedin: linkedin.com/in/olycats
+
+summary: |
+    擁有 15 年 *Data* 與*資訊科技*經驗的分析專業人員。熱衷於建立*可靠的資料解決方案*，實現自助式分析。擅長*深入探究*問題、*找出根本原因*，解決複雜的資料串接問題，並能因應業務需求提出可行的技術實作方案。
+
+work:
+  - company: Teamson（香港商旭昶）
+    location: 台北市
+    startdate: 2022 年 7 月
+    enddate: 2025 年 9 月
+    duration: 3 年 3 個月
+    position: 資深資料工程師（分析工程與系統開發）
+    highlights: 
+      - 主導從舊有報表流程轉換至 *Modern Data Stack*，採用 *Stitch Data* 和 *dbt*，顯著提升資料可靠性與一致性。統一各部門的業務術語，推動組織資料文化的發展。
+      - 扮演導入 *Docker*、*Rundeck* 和 *GitHub Actions* 的關鍵角色，研究技術細節並製作文件，*引導團隊成員*採用新流程。
+      - 成為團隊中最了解 *SAP Business One* 的專家，因深入理解業務流程與技術實作而獲得認可。針對系統配置、資料管理和工作流程優化提供*可信賴的建議*。
+
+  - company: MDF Instruments
+    location: 台北市（遠端）
+    startdate: 2018 年 2 月
+    enddate: 2022 年 6 月
+    duration: 4 年 5 個月
+    position: 資料分析師（資料工程與商業智慧）
+    highlights: 
+      - 在小型（1-2 人）Data 團隊中管理所有*電商資料專案*，交付*支援業務決策*的報表方案。
+      - 開發並部署 *10+ 條資料管道*，串接多樣資料來源，包括網頁爬蟲、API 和 FTP 傳輸，供應*穩定且即時的分析資料*。
+      - 建立並維護*清洗後、可直接用於分析的資料*供 *Power BI* 使用，讓團隊實現自助式資料分析。
+
+  - company: NEC（台灣恩益禧）
+    location: 台北市
+    startdate: 2016 年 3 月
+    enddate: 2017 年 11 月
+    duration: 1 年 9 個月
+    position: 程式設計師（技術支援與維護）
+    highlights: 
+      - 開發並維護 400 家門市零售通路的 *POS 系統*，負責從設計、開發到部署及維護的*完整軟體開發生命週期*。
+      - 透過遠端連線和電話為硬體工程師、客服團隊及門市人員提供*技術支援*，快速解決系統問題。
+      - 設計並執行從舊系統到新平台的*資料搬遷*，在規劃時程內順利完成轉換。
+
+  - company: 驊宏資通
+    location: 台北市
+    startdate: 2014 年 6 月
+    enddate: 2016 年 3 月
+    duration: 1 年 10 個月
+    position: 程式設計師（全端開發）
+    highlights: 
+      - 使用 *ASP.NET web forms （Visual Basic）*開發銀行徵授信系統，協助團隊達成專案目標。
+      - 使用 *Oracle* 和 *MS SQL* 資料庫，以及 *HTML*、*CSS* 和 *JavaScript* 等前端技術，累積全端開發實務經驗。
+      - 參與*軟體開發生命週期*的多個階段，包括開發、系統分析和使用者驗收測試。
+
+  - company: momo（富邦媒體科技）
+    location: 台北市
+    startdate: 2011 年 3 月
+    enddate: 2014 年 5 月
+    duration: 3 年 3 個月
+    position: 資料分析師（報表及商業分析）
+    highlights: 
+      - 使用 *MS Access* 和模組化的 *VBA* 腳本製作 *MS Excel* 業務報表，提升報表效率與準確度。
+      - 分析*零售通路績效*，包括門市營運、行銷活動和業績指標，找出關鍵趨勢和機會。
+      - 執行*財務分析*，精準解讀財務數字與商業分析的差異，得到主管好評。
+
+education:
+  - school: 國立政治大學
+    location: 台北市
+    startdate: 2006 年 9 月
+    enddate: 2011 年 1 月
+    description: 統計系學士學位
