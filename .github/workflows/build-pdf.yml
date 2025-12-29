@@ -31,5 +31,3 @@ jobs:
           git add *.pdf
           git commit -m "🤖 Auto-build PDF [skip ci]" || echo "No changes"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
