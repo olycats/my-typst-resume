@@ -11,19 +11,18 @@
   // Set font
   set text(
     font: config.default-font,
-    size: 9pt,
-    lang: "en",
+    size: eval(config.default-font-size),
     ligatures: false,
   )
 
   // Paragraph spacing
-  set par(leading: 0.5em)
+  set par(leading: eval(config.paragraph-leading-spacing))
 
   // Set level 1 heading
   show heading.where(level: 1): it => [
     #set text(
       weight: 700,
-      size: 18pt,
+      size: eval(config.heading-1-font-size),
       fill: rgb("#c92e62"),
     )
     #pad(it.body)
@@ -33,7 +32,7 @@
   show heading.where(level: 2): it => [
     #set text(
       weight: 700,
-      size: 12pt,
+      size: eval(config.heading-2-font-size),
       fill: rgb("#c92e62"),
     )
     #pad(top: 0pt, bottom: -10pt, [#smallcaps(it.body)])
@@ -43,7 +42,6 @@
   // doc starts here
   doc
 }
-
 
 // Title Section
 #let section-title(data, config) = {
@@ -87,9 +85,9 @@
   // Render title with name, desired titles, and contact information
   align(center)[
     = #data.personal.name
-    #text(size: 10pt, fill: rgb("#646060"))[#data.personal.titles.join(` | `)]
+    #text(size: eval(config.default-font-size), fill: rgb("#646060"))[#data.personal.titles.join(` | `)]
     \
-    #text(size: 9pt)[#contact-items.join(` | `)]
+    #text(size: eval(config.default-font-size))[#contact-items.join(` | `)]
   ]
 }
 
@@ -97,68 +95,69 @@
 // Summary Section
 #let section-summary(data, config, section-title: "Summary") = {
   if ("summary" in data) and (data.summary != none) {
-    block(width: 100%, below: 10pt)[
+    block(width: 100%, below: eval(config.section-spacing))[
       == #section-title
-      #eval(data.summary, mode: "markup")
+      #text(size: eval(config.summary-paragraph-font-size))[
+        #eval(data.summary, mode: "markup")
+      ]
+      
     ]
   }
 }
 
+// Experience period string
+#let experience-period-string(experience, config) = {
+  if ("duration" in experience) and (experience.duration != none) {
+    text(style: "italic", size: eval(config.default-font-size), fill: rgb("#646060"))[
+      #fa-calendar-days() #experience.startdate - #experience.enddate (#experience.duration)
+    ]
+    v(-3pt)
+  } else {
+    text(style: "italic", size: eval(config.default-font-size), fill: rgb("#646060"))[
+      #fa-calendar-days() #experience.startdate - #experience.enddate
+    ]
+    v(-3pt)
+  }
+}
 
-// Work Experience Section
-#let section-experience(data, config, section-title: "Work Experience", isbreakable: true) = {
-  if ("work" in data) and (data.work != none) {
-    block[
-      == #section-title
-      #for work in data.work {
-        block(width: 100%, below: 10pt, breakable: isbreakable)[
-          // Line 1: Company and Location
-          #text(size: 10pt)[*#work.company*]
-          #h(1fr)
-          #fa-location-dot() #work.location
-          #v(-3pt)
+// Experience Section (shared function for Work Experience & Education)
+#let experience-section(section-title, experience-data, config) = {
+  block[
+    == #section-title
+    #for experience in experience-data {
+      block(width: 100%, below: eval(config.section-spacing))[
+        // Line 1: Company/school -- Location
+        #text(size: eval(config.section-line-1-font-size))[*#experience.line-1*]
+        #h(1fr)
+        #fa-location-dot() #experience.location
+        #v(-3pt)
 
-          // Line 2: Position and Date Range
-          #text(size: 9pt)[#work.position]
-          #h(1fr)
-          #text(style: "italic", size: 8pt, fill: rgb("#646060"))[
-            #work.startdate - #work.enddate (#work.duration)
-          ]
-          #v(-3pt)
+        // Line 2: Position/degree -- Date Period
+        #text(size: eval(config.default-font-size))[#experience.line-2]
+        #h(1fr)
+        #experience-period-string(experience, config)
 
-          // Highlights
-          #for highlight in work.highlights [
+        // Highlights
+        #if ("highlights" in experience) and (experience.highlights != none) {
+          for highlight in experience.highlights [
             - #eval(highlight, mode: "markup")
           ]
-        ]
-      }
-    ]
+        }
+      ]
+    }
+  ]
+}
+
+// Work Experience Section
+#let section-experience(data, config) = {
+  if ("work" in data) and (data.work != none) {
+    experience-section("Work Experience", data.work, config)
   }
 }
 
 // Education Section
-#let section-education(data, config, section-title: "Education", isbreakable: true) = {
+#let section-education(data, config, section-title: "Education") = {
   if ("education" in data) and (data.education != none) {
-    block[
-      == #section-title
-      #for education in data.education {
-        // Create a block layout for each education entry
-        block(width: 100%, below: 8pt, breakable: isbreakable)[
-
-          // Line 1: School and Location
-          #text(size: 10pt)[*#education.school*]
-          #h(1fr)
-          #text(size: 8pt)[#fa-location-dot() #education.location]
-          #v(-3pt)
-
-          // Line 2: Degree and Date
-          #text(size: 9pt)[#education.description]
-          #h(1fr)
-          #text(style: "italic", size: 8pt, fill: rgb("#646060"))[
-            #education.startdate - #education.enddate
-          ]
-        ]
-      }
-    ]
+    experience-section("Education", data.education, config)
   }
 }
