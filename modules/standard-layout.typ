@@ -1,5 +1,19 @@
 #import "@preview/fontawesome:0.6.0": *
 
+// Define default config
+#let default-config = (
+  language: "en_US",
+  default-font: "Carlito",
+  default-font-size: 10pt,
+  heading-1-font-size: 20pt,
+  heading-2-font-size: 14pt,
+  summary-paragraph-font-size: 12pt,
+  section-line-1-font-size: 12pt,
+  section-spacing: 1.3em,
+  paragraph-leading-spacing: 0.5em,
+)
+
+// Initialize page layout
 #let initpage(doc, config) = {
   // Set page
   set page(
@@ -11,18 +25,18 @@
   // Set font
   set text(
     font: config.default-font,
-    size: eval(config.default-font-size),
+    size: config.default-font-size,
     ligatures: false,
   )
 
   // Paragraph spacing
-  set par(leading: eval(config.paragraph-leading-spacing))
+  set par(leading: config.paragraph-leading-spacing)
 
   // Set level 1 heading
   show heading.where(level: 1): it => [
     #set text(
       weight: 700,
-      size: eval(config.heading-1-font-size),
+      size: config.heading-1-font-size,
       fill: rgb("#c92e62"),
     )
     #pad(it.body)
@@ -32,7 +46,7 @@
   show heading.where(level: 2): it => [
     #set text(
       weight: 700,
-      size: eval(config.heading-2-font-size),
+      size: config.heading-2-font-size,
       fill: rgb("#c92e62"),
     )
     #pad(top: 0pt, bottom: -10pt, [#smallcaps(it.body)])
@@ -85,9 +99,9 @@
   // Render title with name, desired titles, and contact information
   align(center)[
     = #data.personal.name
-    #text(size: eval(config.default-font-size), fill: rgb("#646060"))[#data.personal.titles.join(` | `)]
+    #text(size: config.default-font-size, fill: rgb("#646060"))[#data.personal.titles.join(` | `)]
     \
-    #text(size: eval(config.default-font-size))[#contact-items.join(` | `)]
+    #text(size: config.default-font-size)[#contact-items.join(` | `)]
   ]
 }
 
@@ -95,9 +109,9 @@
 // Summary Section
 #let section-summary(data, config, section-title: "Summary") = {
   if ("summary" in data) and (data.summary != none) {
-    block(width: 100%, below: eval(config.section-spacing))[
+    block(width: 100%, below: config.section-spacing)[
       == #section-title
-      #text(size: eval(config.summary-paragraph-font-size))[
+      #text(size: config.summary-paragraph-font-size)[
         #eval(data.summary, mode: "markup")
       ]
       
@@ -108,12 +122,12 @@
 // Experience period string
 #let experience-period-string(experience, config) = {
   if ("duration" in experience) and (experience.duration != none) {
-    text(style: "italic", size: eval(config.default-font-size), fill: rgb("#646060"))[
+    text(style: "italic", size: config.default-font-size, fill: rgb("#646060"))[
       #fa-calendar-days() #experience.startdate - #experience.enddate (#experience.duration)
     ]
     v(-3pt)
   } else {
-    text(style: "italic", size: eval(config.default-font-size), fill: rgb("#646060"))[
+    text(style: "italic", size: config.default-font-size, fill: rgb("#646060"))[
       #fa-calendar-days() #experience.startdate - #experience.enddate
     ]
     v(-3pt)
@@ -125,15 +139,15 @@
   block[
     == #section-title
     #for experience in experience-data {
-      block(width: 100%, below: eval(config.section-spacing))[
+      block(width: 100%, below: config.section-spacing)[
         // Line 1: Company/school -- Location
-        #text(size: eval(config.section-line-1-font-size))[*#experience.line-1*]
+        #text(size: config.section-line-1-font-size)[*#experience.line-1*]
         #h(1fr)
         #fa-location-dot() #experience.location
         #v(-3pt)
 
         // Line 2: Position/degree -- Date Period
-        #text(size: eval(config.default-font-size))[#experience.line-2]
+        #text(size: config.default-font-size)[#experience.line-2]
         #h(1fr)
         #experience-period-string(experience, config)
 
