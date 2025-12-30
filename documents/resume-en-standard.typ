@@ -1,12 +1,12 @@
-// Import layout file
-#import "../modules/standard-layout.typ" as layout
+// Import theme file
+#import "../modules/themes/standard-theme.typ" as theme
 
 // Load YAML data
 #let data = yaml("../data/resume-data-en.yml")
 
 // Define config
 #let config = (
-  layout.default-config
+  theme.default-config
     + (
       language: "en_US",
       default-font: "Carlito",
@@ -20,11 +20,5 @@
     )
 )
 
-// Document-level show
-#show: doc => layout.initpage(doc, config)
-
-// Document body
-#layout.section-title(data, config)
-#layout.section-summary(data, config)
-#layout.section-experience(data, config)
-#layout.section-education(data, config)
+// Render resume
+#theme.render-resume(data, config)

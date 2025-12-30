@@ -1,3 +1,4 @@
+// Import Font Awesome
 #import "@preview/fontawesome:0.6.0": *
 
 // Define default config
@@ -12,6 +13,8 @@
   section-spacing: 1.3em,
   paragraph-leading-spacing: 0.5em,
 )
+
+
 
 // Initialize page layout
 #let initpage(doc, config) = {
@@ -114,7 +117,7 @@
       #text(size: config.summary-paragraph-font-size)[
         #eval(data.summary, mode: "markup")
       ]
-      
+
     ]
   }
 }
@@ -174,4 +177,16 @@
   if ("education" in data) and (data.education != none) {
     experience-section("Education", data.education, config)
   }
+}
+
+// Render resume
+#let render-resume(data, config) = {
+  // Document-level show
+  show: doc => initpage(doc, config)
+
+  // Document body
+  section-title(data, config)
+  section-summary(data, config)
+  section-experience(data, config)
+  section-education(data, config)
 }
