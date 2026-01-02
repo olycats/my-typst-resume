@@ -4,20 +4,20 @@ personal:
   titles:
     - Analytics Engineer
     - IT Developer
-  contactitems:
+  contact-items:
     location: Taoyuan, Taiwan
     email: olycats@gmail.com
     linkedin: linkedin.com/in/olycats
 
 summary: |
-    Analytics professional with 15 years of experience in *data* and *information technology*. Passionate about building *reliable data solutions* that enable self-service analytics. Known for *diving deep* into problems, *uncovering root causes* behind complex integration issues. Effective at connecting business needs with technical implementation.
+    Analytics professional with 15 years of experience in *data* and *information technology*. Passionate about building *reliable data solutions* that enable self-service analytics. Known for *diving deep* into problems, *uncovering root causes* behind complex integration issues. Effective at connecting business needs with *technical implementation*.
 
 work:
   - line-1: Teamson
     line-2: Senior Data Engineer (Analytics Engineering & IT Development)
     location: Taipei, Taiwan
-    startdate: Jul 2022
-    enddate: Sep 2025
+    start-date: Jul 2022
+    end-date: Sep 2025
     duration: 3 yrs 3 mos
     highlights: 
       - Led migration from legacy reporting to *Modern Data Stack* using *Stitch Data* and *dbt*, improving data reliability and consistency. Standardized business terminology across departments, strengthening organizational data culture.
@@ -27,8 +27,8 @@ work:
   - line-1: MDF Instruments
     line-2: Data Analyst (Data Engineering & Business Intelligence)
     location: Taipei, Taiwan (Remote)
-    startdate: Feb 2018
-    enddate: Jun 2022
+    start-date: Feb 2018
+    end-date: Jun 2022
     duration: 4 yrs 5 mos
     highlights: 
       - Managed all *eCommerce data projects* within a small (1-2 person) data team, delivering reports that *informed business decisions*.
@@ -38,8 +38,8 @@ work:
   - line-1: NEC Taiwan
     line-2: Programmer (Technical Support & Maintenance)
     location: Taipei, Taiwan
-    startdate: Mar 2016
-    enddate: Nov 2017
+    start-date: Mar 2016
+    end-date: Nov 2017
     duration: 1 yr 9 mos
     highlights: 
       - Developed and maintained the *POS system* for a 400-store retail chain, managing the *complete software development lifecycle* from design and development through deployment and maintenance.
@@ -49,8 +49,8 @@ work:
   - line-1: Azion Corporation
     line-2: Programmer (Full-Stack Development)
     location: Taipei, Taiwan
-    startdate: Jun 2014
-    enddate: Mar 2016
+    start-date: Jun 2014
+    end-date: Mar 2016
     duration: 1 yr 10 mos
     highlights: 
       - Developed e-Loan lending system applications using *ASP.NET web forms (Visual Basic)*, contributing to team deliverables and project milestones.
@@ -60,8 +60,8 @@ work:
   - line-1: momo.com Inc.
     line-2: Data Analyst (Business Analytics & Reporting)
     location: Taipei, Taiwan
-    startdate: Mar 2011
-    enddate: May 2014
+    start-date: Mar 2011
+    end-date: May 2014
     duration: 3 yrs 3 mos
     highlights: 
       - Built automated business reports in *MS Excel spreadsheets* using *MS Access* and optimized *VBA* scripts, improving reporting efficiency and accuracy.
@@ -72,5 +72,5 @@ education:
   - line-1: National Chengchi University
     line-2: Bachelor's degree in Statistics
     location: Taipei, Taiwan
-    startdate: Sep 2006
-    enddate: Jan 2011
+    start-date: Sep 2006
+    end-date: Jan 2011
