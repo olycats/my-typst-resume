@@ -1,23 +1,20 @@
-// Initialize page layout
+// Initialize document with basic configs
 #let initpage(doc, config) = {
-  // Set page
+  // Set page margin, paper size, and background color
   set page(
     margin: config.page.margin,
     paper: config.page.paper,
     fill: config.colors.bg-page,
   )
 
-  // Set font
+  // Set font family, size, and color
   set text(
     font: config.fonts.default,
     size: config.sizes.default,
-    ligatures: false,
+    fill: config.colors.text-body,
+    ligatures: false, // disabled for ATS friendliness
   )
-
-  // Set paragraph spacing
-  set par(leading: config.spacings.leading)
 
   // doc starts here
   doc
 }
-

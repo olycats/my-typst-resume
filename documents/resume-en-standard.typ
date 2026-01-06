@@ -11,10 +11,9 @@
       // Font Families
       fonts: (
         default: "Carlito",
-        heading: "Carlito",
       ),
     )
 )
 
-// Render resume
-#theme.render-resume(data, config)
+// Render document
+#theme.render-document(data, config)

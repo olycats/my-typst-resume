@@ -11,10 +11,9 @@
       // Font Families
       fonts: (
         default: "Noto Sans CJK TC",
-        heading: "Noto Sans CJK TC",
       ),
     )
 )
 
-// Render resume
-#theme.render-resume(data, config)
+// Render document
+#theme.render-document(data, config)
