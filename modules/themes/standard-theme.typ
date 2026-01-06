@@ -25,7 +25,6 @@
         bg-badge-date: rgb("#e8dfd4"), // Warm gray-beige
         bg-badge-location: rgb("#f5ede4"), // Light beige
         bg-badge-contact: rgb("#f9f3ed"), // Soft cream
-        bg-badge-titles: rgb("#fff9f0"), // Very light
         // Text colors
         text-body: rgb("#4a3d32"), // Darker brown
         text-name: rgb("#5a4838"), // Rich brown
@@ -35,12 +34,8 @@
         text-badge-date: rgb("#6b5744"), // Medium brown
         text-badge-location: rgb("#8b7565"), // Light brown
         text-badge-contact: rgb("#7a6555"), // Warm brown
-        text-badge-titles: rgb("#8b6f47"), // Golden brown
         // Borders
         border: rgb("#e8dfd4"), // Warmer border
-        border-titles-badge: rgb("#e8d5c4"),
-        border-entry-card: rgb("#d4b5a0"),
-        border-summary: rgb("#d4c5b5"), // Summary accent
         // Deco
         gradient-start: rgb("#d4c5b5").transparentize(20%),
         gradient-middle: rgb("#c4b5a5").transparentize(40%),
@@ -59,11 +54,13 @@
     below: 10pt,
   )[
     // Title text
+    #v(4pt)
     #text(
       weight: 700,
       size: config.sizes.section-header,
       fill: config.colors.text-section-title,
-    )[#section-title]
+      tracking: 0.5pt
+    )[#upper(section-title)]
 
     // Adjust spacing
     #v(-10pt)
@@ -71,7 +68,7 @@
     // Decorative underline
     #box(
       width: 100%,
-      height: 3pt,
+      height: 2.5pt,
       fill: gradient.linear(
         config.colors.gradient-start,
         config.colors.gradient-middle,
@@ -117,6 +114,7 @@
     #text(
       fill: config.colors.text-section-title,
       size: config.sizes.section-line-2,
+      style: "italic"
     )[
       #data.personal.titles.join("  •  ")
     ]
@@ -280,71 +278,68 @@
         inset: 16pt,
         radius: 16pt,
       )[
-        #block(
-          inset: (left: 12pt),
-          stroke: (left: 3pt + config.colors.border-entry-card),
-        )[
-          // Line 1: Company/school -- Location
-          #grid(
-            columns: (1fr, auto),
-            align: (left, right),
-            // Left: Company/School
-            {
-              v(0.7em) // Adjust vertical alignment
-              text(
-                size: config.sizes.section-line-1,
-                fill: config.colors.text-entry-line-1,
-                weight: 600,
-              )[#experience.line-1]
-            },
 
-            // Right: Location Badge
-            // components.location-badge(experience, config),
-            box(
-              inset: (x: 10pt, y: 5pt),
-              radius: 10pt,
-              fill: config.colors.bg-badge-location,
-              text(
-                size: config.sizes.meta,
-                fill: config.colors.text-badge-location,
-              )[
-                #utils.get-icon("location")
-                #h(2pt)
-                #experience.location
-              ],
-            ),
-          )
-
-          // Adjust spacing between line-1 and line-2
-          #v(-4pt)
-
-          // Line 2: Position/degree -- Date Period
-          #grid(
-            columns: (1fr, auto),
-            align: (left, right),
-            // Left: Position/degree
+        // Line 1: Company/school -- Location
+        #grid(
+          columns: (1fr, auto),
+          align: (left, right),
+          // Left: Company/School
+          {
+            v(0.7em) // Adjust vertical alignment
             text(
-              size: config.sizes.section-line-2,
-              fill: config.colors.text-entry-line-2,
-              weight: 500,
-            )[#experience.line-2],
+              size: config.sizes.section-line-1,
+              fill: config.colors.text-entry-line-1,
+              weight: 600,
+            )[#experience.line-1]
+          },
 
-            // Right: Date Period
-            box(
-              inset: (x: 10pt, y: 5pt),
-              radius: 10pt,
-              fill: config.colors.bg-badge-date,
-              text(
-                size: config.sizes.meta,
-                fill: config.colors.text-badge-date,
-              )[
-                #utils.get-icon("calendar")
-                #h(2pt)
-                #utils.build-experience-period(experience)
-              ],
-            ),
-          )
-        ]
+          // Right: Location Badge
+          // components.location-badge(experience, config),
+          box(
+            inset: (x: 10pt, y: 5pt),
+            radius: 10pt,
+            fill: config.colors.bg-badge-location,
+            text(
+              size: config.sizes.meta,
+              fill: config.colors.text-badge-location,
+            )[
+              #utils.get-icon("location")
+              #h(2pt)
+              #experience.location
+            ],
+          ),
+        )
+
+        // Adjust spacing between line-1 and line-2
+        #v(-4pt)
+
+        // Line 2: Position/degree -- Date Period
+        #grid(
+          columns: (1fr, auto),
+          align: (left, right),
+          // Left: Position/degree
+          text(
+            size: config.sizes.section-line-2,
+            fill: config.colors.text-entry-line-2,
+            weight: 500,
+            style: "italic"
+          )[#experience.line-2],
+
+          // Right: Date Period
+          box(
+            inset: (x: 10pt, y: 5pt),
+            radius: 10pt,
+            fill: config.colors.bg-badge-date,
+            text(
+              size: config.sizes.meta,
+              fill: config.colors.text-badge-date,
+            )[
+              #utils.get-icon("calendar")
+              #h(2pt)
+              #utils.build-experience-period(experience)
+            ],
+          ),
+        )
 
         // Adjust spacing between entry title and highlights
         #v(-2pt)
