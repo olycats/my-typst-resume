@@ -1,5 +1,5 @@
 // Import theme file
-#import "../modules/themes/gentle-theme.typ" as theme
+#import "../modules/themes/standard-theme.typ" as theme
 #import "../modules/colors/_default.typ" as color-scheme
 
 // Load YAML data
