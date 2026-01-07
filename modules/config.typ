@@ -28,8 +28,8 @@
   // Colors
   colors: (
     // Background Colors
-    bg-page: white, // Mandatory for page setup. Other colors are defined in themes.
+    bg-page: white, // Mandatory for page setup. Other colors are defined in color schemes.
     // Text Colors
-    text-body: black, // Mandatory for page setup. Other colors are defined in themes.
+    text-body: black, // Mandatory for page setup. Other colors are defined in color schemes.
   ),
 )
