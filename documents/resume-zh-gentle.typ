@@ -1,5 +1,5 @@
 // Import theme file
-#import "../modules/themes/standard-theme.typ" as theme
+#import "../modules/themes/gentle-theme.typ" as theme
 
 // Load YAML data
 #let data = yaml("../data/resume-data-zh.yml")
