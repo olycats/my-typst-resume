@@ -1,6 +1,6 @@
 // Import theme file
 #import "../modules/themes/gentle-theme.typ" as theme
-#import "../modules/colors/slate.typ" as color-scheme
+#import "../modules/colors/_default.typ" as color-scheme
 
 // Load YAML data
 #let data = yaml("../data/resume-data-en.yml")

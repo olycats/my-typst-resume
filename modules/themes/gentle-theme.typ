@@ -13,38 +13,6 @@
         default: "Carlito",
       ),
     )
-    // Add theme-specific config
-    + (
-      // Colors
-      colors: (
-        // Background colors
-        bg-page: rgb("#faf7f2"), // Soft beige
-        bg-card-header: white,
-        bg-card-summary: rgb("#f9f3ed"), // Warm cream
-        bg-card-entries: white, // Pure white
-        bg-badge-date: rgb("#e8dfd4"), // Warm gray-beige
-        bg-badge-location: rgb("#f5ede4"), // Light beige
-        bg-badge-contact: rgb("#f9f3ed"), // Soft cream
-        // Text colors
-        text-body: rgb("#4a3d32"), // Darker brown
-        text-name: rgb("#5a4838"), // Rich brown
-        text-section-title: rgb("#6b5744"), // Warm brown
-        text-entry-line-1: rgb("#5a4838"), // Company/School
-        text-entry-line-2: rgb("#7a6555"), // Position/Degree
-        text-badge-date: rgb("#6b5744"), // Medium brown
-        text-badge-location: rgb("#8b7565"), // Light brown
-        text-badge-contact: rgb("#7a6555"), // Warm brown
-        // Borders
-        border: rgb("#e8dfd4"), // Warmer border
-        // Deco
-        gradient-start: rgb("#d4c5b5").transparentize(20%),
-        gradient-middle: rgb("#c4b5a5").transparentize(40%),
-        gradient-end: rgb("#e8dfd4").transparentize(70%),
-        // Accent colors
-        accent-primary: rgb("#8b6f47"),
-        accent-secondary: rgb("#a0826d"),
-      ),
-    )
 )
 
 // Build section title

@@ -1,3 +1,5 @@
+#import "colors/_default.typ" as color-scheme
+
 // Define project level default config
 #let default-config = (
   // Page Setup
@@ -5,6 +7,8 @@
     margin: (x: 0.6in, y: 0.6in),
     paper: "a4",
   ),
+  // Colors
+  colors: color-scheme.colors,
   // Section Titles
   section-titles: (
     summary: "Summary",
@@ -24,12 +28,5 @@
     section-line-2: 12pt,
     summary-paragraph: 12pt,
     meta: 9pt,
-  ),
-  // Colors
-  colors: (
-    // Background Colors
-    bg-page: white, // Mandatory for page setup. Other colors are defined in color schemes.
-    // Text Colors
-    text-body: black, // Mandatory for page setup. Other colors are defined in color schemes.
   ),
 )
