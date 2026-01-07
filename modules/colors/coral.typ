@@ -1,5 +1,5 @@
-// Navy - Deep Blue with subtle accent
-// Professional with a hint of color
+// Coral - Elegant playfulness
+// Navy blue with coral pink accent
 
 #let colors = (
   // Background
@@ -13,6 +13,7 @@
   // Text
   text-body: rgb("#1e293b"),
   text-name: rgb("#0f1728"),
+  text-section-title: rgb("#334155"),
   text-entry-line-1: rgb("#0f1728"),
   text-entry-line-2: rgb("#475569"),
   text-badge-contact: rgb("#1e293b"),
@@ -21,7 +22,7 @@
   // Borders
   border: rgb("#e3e8ef"),
   border-strong: rgb("#cbd5e0"),
-  // Accents - subtle blue for decorations
-  accent-primary: rgb("#1e3a5f"),       // Deep blue (section titles)
-  accent-secondary: rgb("#2563eb"),     // Brighter blue (decorations)
+  // Accents - navy blue + coral pink
+  accent-primary: rgb("#1e3a5f"),       // Navy blue (section titles)
+  accent-secondary: rgb("#ff6b9d"),     // Coral pink (decorations)
 )
