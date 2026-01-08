@@ -321,14 +321,23 @@
 
         // Highlights lines
         #for highlight in experience.highlights [
-          #block()[
-            #box(
-              width: 4pt,
-              height: 4pt,
-              fill: config.colors.accent-primary,
-              radius: 50%,
-            )
-            #h(8pt) // Spacing between bullet and text
+          #block(
+            width: 100%,
+            inset: (left: 12pt, rest: 0pt), // 12pt = 4pt (bullet width) + 8pt (spacing)
+          )[
+            // Bullet point
+            #place(
+              left,
+              dx: -12pt,
+            )[
+              #box(
+                width: 4pt,
+                height: 4pt,
+                fill: config.colors.accent-primary,
+                radius: 50%,
+              )
+            ]
+            // Highlight text
             #text(
               size: config.sizes.default,
               fill: config.colors.text-body,
