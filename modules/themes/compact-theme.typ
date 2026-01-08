@@ -26,13 +26,18 @@
     width: 100%,
     below: 10pt,
   )[
+    // Section title
     #text(
       weight: 700,
       size: config.sizes.section-header,
       fill: config.colors.accent-primary,
       tracking: 0.8pt,
     )[#upper(section-title)]
+
+    // Spacing between section title and underline
     #v(-8pt)
+
+    // Decorative underline
     #line(
       length: 100%,
       stroke: 1.2pt
@@ -41,6 +46,9 @@
           config.colors.accent-secondary,
         ),
     )
+
+    // Additional space below
+    #v(config.spacing.section-title-below)
   ]
 }
 
@@ -48,7 +56,7 @@
 #let build-header(data, config) = {
   block(
     width: 100%,
-    below: 6pt,
+    below: config.spacing.header-below,
   )[
     // Name
     #align(center)[
@@ -60,7 +68,7 @@
       )[#data.personal.name]
     ]
 
-    #v(-8pt)
+    #v(config.spacing.v-name-to-titles)
 
     // Titles
     #align(center)[
@@ -79,8 +87,14 @@
     #let contact-items = ()
     #for (type, value) in data.personal.contact-items {
       let icon-and-text = {
-        text(size: config.sizes.meta, fill: config.colors.accent-secondary)[#utils.get-icon(type)]
-        h(4pt) // Space between icon and text
+        // icon
+        text(
+          size: config.sizes.meta,
+          fill: config.colors.accent-secondary,
+        )[#utils.get-icon(type)]
+        // spacing between icon and contact text
+        h(config.spacing.icon-to-text)
+        // Contact text
         text()[#value]
       }
 
@@ -95,12 +109,12 @@
     #align(center)[
       #stack(
         dir: ltr,
-        spacing: 12pt,
+        spacing: config.spacing.contact-items-spacing,
         ..contact-items,
       )
     ]
 
-    #v(-2pt)
+    #v(config.spacing.v-contact-to-line)
     #line(length: 100%, stroke: 0.5pt + config.colors.border)
   ]
 }
@@ -113,10 +127,10 @@
 
   block(
     width: 100%,
-    below: 12pt,
-    inset: 4pt
+    below: config.spacing.summary-below,
+    inset: config.spacing.summary-inset,
   )[
-    #set par(leading: 0.8em)
+    #set par(leading: config.spacing.summary-par-leading)
     #text(
       size: config.sizes.summary-paragraph,
       fill: config.colors.text-body,
@@ -125,14 +139,14 @@
 }
 
 // Work Experience/Education
-#let build-entries(work-data, config, section-title) = {
+#let build-entries(entries-data, config, section-title) = {
   block[
     #build-section-title(section-title, config)
 
-    #for work in work-data [
+    #for entry in entries-data [
       #block(
         width: 100%,
-        below: 12pt,
+        below: config.spacing.v-entry-below,
       )[
         // Company & Location
         #grid(
@@ -144,17 +158,17 @@
             size: config.sizes.section-line-1,
             fill: config.colors.text-entry-line-1,
             weight: 700,
-          )[#work.line-1],
+          )[#entry.line-1],
 
           // Location
           text(
             size: config.sizes.meta,
             fill: config.colors.text-body.lighten(25%),
           )[
-            #utils.get-icon("location") #work.location
+            #utils.get-icon("location") #entry.location
           ],
         )
-        #v(-6pt)
+        #v(config.spacing.v-company-to-position)
 
         // Position & Period
         #grid(
@@ -166,36 +180,49 @@
             size: config.sizes.section-line-2,
             fill: config.colors.text-entry-line-2,
             style: "italic",
-          )[#work.line-2],
+          )[#entry.line-2],
 
           // Location and Date
           text(
             size: config.sizes.meta,
             fill: config.colors.text-body.lighten(25%),
           )[
-            #utils.get-icon("calendar") #utils.build-experience-period(work)
+            #utils.get-icon("calendar") #utils.build-experience-period(entry)
           ],
         )
-        #v(-6pt)
+        #v(config.spacing.v-position-to-highlights)
 
         // Highlights
-        #if ("highlights" in work) and (work.highlights != none) [
-          #v(-1pt)
-          #set par(leading: 0.4em)
+        #if ("highlights" in entry) and (entry.highlights != none) [
+          #v(config.spacing.v-highlights-start)
+
+          #set par(
+            leading: config.spacing.highlights-par-leading,
+          )
+
           #grid(
             columns: (100%,),
-            row-gutter: 8pt,
-            ..work.highlights.map(
-              h => text(
-                size: config.sizes.default,
-                fill: config.colors.text-body,
-              )[• #eval(h, mode: "markup")],
+            row-gutter: config.spacing.highlights-row-gutter,
+            ..entry.highlights.map(
+              h => block(
+                width: 100%,
+                inset: (left: config.spacing.bullet-hanging-indent, rest: 0pt),
+              )[
+                #place(
+                  left,
+                  dx: -config.spacing.bullet-hanging-indent,
+                )[•]
+                #text(
+                  size: config.sizes.default,
+                  fill: config.colors.text-body,
+                )[#eval(h, mode: "markup")]
+              ],
             )
           )
         ]
       ]
     ]
-    #v(2pt)
+    #v(config.spacing.entries-below)
   ]
 }
 
