@@ -13,38 +13,6 @@
         default: "Carlito",
       ),
     )
-    // Add theme-specific config
-    + (
-      // Colors
-      colors: (
-        // Background colors
-        bg-page: rgb("#faf7f2"), // Soft beige
-        bg-card-header: white,
-        bg-card-summary: rgb("#f9f3ed"), // Warm cream
-        bg-card-entries: white, // Pure white
-        bg-badge-date: rgb("#e8dfd4"), // Warm gray-beige
-        bg-badge-location: rgb("#f5ede4"), // Light beige
-        bg-badge-contact: rgb("#f9f3ed"), // Soft cream
-        // Text colors
-        text-body: rgb("#4a3d32"), // Darker brown
-        text-name: rgb("#5a4838"), // Rich brown
-        text-section-title: rgb("#6b5744"), // Warm brown
-        text-entry-line-1: rgb("#5a4838"), // Company/School
-        text-entry-line-2: rgb("#7a6555"), // Position/Degree
-        text-badge-date: rgb("#6b5744"), // Medium brown
-        text-badge-location: rgb("#8b7565"), // Light brown
-        text-badge-contact: rgb("#7a6555"), // Warm brown
-        // Borders
-        border: rgb("#e8dfd4"), // Warmer border
-        // Deco
-        gradient-start: rgb("#d4c5b5").transparentize(20%),
-        gradient-middle: rgb("#c4b5a5").transparentize(40%),
-        gradient-end: rgb("#e8dfd4").transparentize(70%),
-        // Accent colors
-        accent-primary: rgb("#8b6f47"),
-        accent-secondary: rgb("#a0826d"),
-      ),
-    )
 )
 
 // Build section title
@@ -53,28 +21,26 @@
     width: 100%,
     below: 10pt,
   )[
-    // Title text
-    #v(4pt)
-    #text(
-      weight: 700,
-      size: config.sizes.section-header,
-      fill: config.colors.text-section-title,
-      tracking: 0.5pt
-    )[#upper(section-title)]
+    #grid(
+      columns: (auto, 1fr),
+      column-gutter: 12pt,
+      align: horizon,
 
-    // Adjust spacing
-    #v(-10pt)
-
-    // Decorative underline
-    #box(
-      width: 100%,
-      height: 2.5pt,
-      fill: gradient.linear(
-        config.colors.gradient-start,
-        config.colors.gradient-middle,
-        config.colors.gradient-end,
+      // Left: decorative box
+      box(
+        width: 4pt,
+        height: 18pt,
+        fill: config.colors.accent-secondary,
+        radius: 0pt,
       ),
-      radius: 1.5pt,
+
+      // Right: Title text
+      text(
+        weight: 700,
+        size: config.sizes.section-header,
+        fill: config.colors.accent-primary,
+        tracking: 0.5pt,
+      )[#upper(section-title)],
     )
   ]
 }
@@ -91,18 +57,17 @@
   ]
 }
 
-// Build decorative underline in header
-#let build-header-underline(config) = {
-  // Elegant underline
+// Build decorative line in header
+#let build-header-decorative-line(config) = {
   align(center)[
     #box(
-      width: 45%,
+      width: 100%,
       height: 2.5pt,
       radius: 1.5pt,
       fill: gradient.linear(
-        config.colors.gradient-start.transparentize(50%),
-        config.colors.accent-primary,
-        config.colors.gradient-end.transparentize(50%),
+        config.colors.accent-secondary.transparentize(80%),
+        config.colors.accent-primary.transparentize(40%),
+        config.colors.accent-secondary.transparentize(80%),
       ),
     )
   ]
@@ -112,9 +77,9 @@
 #let build-header-titles(data, config) = {
   align(center)[
     #text(
-      fill: config.colors.text-section-title,
+      fill: config.colors.accent-primary,
       size: config.sizes.section-line-2,
-      style: "italic"
+      style: "italic",
     )[
       #data.personal.titles.join("  •  ")
     ]
@@ -176,18 +141,19 @@
   block(
     width: 100%,
     fill: config.colors.bg-card-header,
-    inset: 16pt,
-    radius: 20pt,
+    inset: 0pt,
+    radius: 6pt,
     below: 18pt,
     outset: 0pt,
   )[
-    #build-header-underline(config)
+    #build-header-decorative-line(config)
     #v(-6pt)
     #build-header-name(data, config)
-    #v(2pt)
+    #v(-6pt)
     #build-header-titles(data, config)
     #v(6pt)
     #build-header-contact-list(data, config)
+    #v(8pt)
   ]
 }
 
@@ -209,9 +175,8 @@
     #block(
       width: 100%,
       fill: config.colors.bg-card-summary,
-      stroke: (left: 4pt + config.colors.accent-secondary),
-      inset: 16pt,
-      radius: 6pt,
+      inset: 24pt,
+      radius: 16pt,
     )[
       // Opening quote mark
       #place(
@@ -247,8 +212,8 @@
         )
       ]
       #v(-10pt)
-
     ]
+    #v(12pt)
   ]
 }
 
@@ -276,7 +241,7 @@
         fill: config.colors.bg-card-entries,
         stroke: 1pt + config.colors.border,
         inset: 16pt,
-        radius: 16pt,
+        radius: 10pt,
       )[
 
         // Line 1: Company/school -- Location
@@ -322,7 +287,7 @@
             size: config.sizes.section-line-2,
             fill: config.colors.text-entry-line-2,
             weight: 500,
-            style: "italic"
+            style: "italic",
           )[#experience.line-2],
 
           // Right: Date Period
@@ -356,14 +321,23 @@
 
         // Highlights lines
         #for highlight in experience.highlights [
-          #block()[
-            #box(
-              width: 4pt,
-              height: 4pt,
-              fill: config.colors.accent-primary,
-              radius: 50%,
-            )
-            #h(8pt) // Spacing between bullet and text
+          #block(
+            width: 100%,
+            inset: (left: 12pt, rest: 0pt), // 12pt = 4pt (bullet width) + 8pt (spacing)
+          )[
+            // Bullet point
+            #place(
+              left,
+              dx: -12pt,
+            )[
+              #box(
+                width: 4pt,
+                height: 4pt,
+                fill: config.colors.accent-primary,
+                radius: 50%,
+              )
+            ]
+            // Highlight text
             #text(
               size: config.sizes.default,
               fill: config.colors.text-body,
@@ -372,6 +346,7 @@
         ]
       ]
     }
+    #v(12pt)
   ]
 }
 
