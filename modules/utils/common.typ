@@ -8,6 +8,10 @@
     calendar: fa-calendar-days(),
     email: fa-envelope(),
     linkedin: fa-linkedin(),
+    summary-section: fa-user(),
+    contact-section: fa-contact-card(),
+    education-section: fa-graduation-cap(),
+    work-experience-section: fa-briefcase()
   )
 
   return icons.at(type, default: none)
