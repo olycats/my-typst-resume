@@ -3,7 +3,7 @@
 #import "../modules/colors/_default.typ" as color-scheme
 
 // Load YAML data
-#let data = yaml("../data/resume-data-en.yml")
+#let data = yaml("../data/zh-data-focus.yml")
 
 // Override default configuration
 #let config = (
@@ -13,7 +13,7 @@
     // Override additional configs
     + (
       fonts: (
-        default: "Carlito",
+        default: "Noto Sans CJK TC",
       ),
     )
 )
