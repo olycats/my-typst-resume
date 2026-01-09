@@ -1,0 +1,61 @@
+personal:
+  name: Stacy (Ko-Han) Lo
+  email: olycats@gmail.com
+  titles:
+    - Integration Developer
+    - Technical Consultant
+  contact-items:
+    location: Taoyuan, Taiwan
+    email: olycats@gmail.com
+    linkedin: linkedin.com/in/olycats
+
+summary: |
+    IT professional with 15 years in *software development*, *IT integration*, and *data engineering*. Experience includes ERP administration, system analysis, data pipelines, and eCommerce solutions. Known for *diving deep* into technical issues, *uncovering root causes* behind complex integration problems. Effective at translating business requirements into *actionable technical implementations*.
+
+work:
+  - line-1: Teamson
+    line-2: Senior Data Engineer (Data & IT Development)
+    location: Taipei, Taiwan
+    start-date: Jul 2022
+    end-date: Sep 2025
+    duration: 3 yrs 3 mos
+    highlights: 
+
+  - line-1: MDF Instruments
+    line-2: Data Analyst (Data Engineering & Business Intelligence)
+    location: Taipei, Taiwan (Remote)
+    start-date: Feb 2018
+    end-date: Jun 2022
+    duration: 4 yrs 5 mos
+    highlights: 
+
+  - line-1: NEC Taiwan
+    line-2: Programmer (Technical Support & Maintenance)
+    location: Taipei, Taiwan
+    start-date: Mar 2016
+    end-date: Nov 2017
+    duration: 1 yr 9 mos
+    highlights: 
+
+  - line-1: Azion Corporation
+    line-2: Programmer (Full-Stack Development)
+    location: Taipei, Taiwan
+    start-date: Jun 2014
+    end-date: Mar 2016
+    duration: 1 yr 10 mos
+    highlights: 
+
+  - line-1: momo.com Inc.
+    line-2: Data Analyst (Reporting & Business Analytics)
+    location: Taipei, Taiwan
+    start-date: Mar 2011
+    end-date: May 2014
+    duration: 3 yrs 3 mos
+    highlights: 
+
+education:
+  - line-1: National Chengchi University
+    line-2: Bachelor's degree in Statistics
+    location: Taipei, Taiwan
+    start-date: Sep 2006
+    end-date: Jan 2011
