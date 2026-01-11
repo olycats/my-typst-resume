@@ -21,7 +21,7 @@ work:
     duration: 3 yrs 3 mos
     highlights: 
       - Led migration from legacy reporting to *Modern Data Stack* using *Stitch Data* and *dbt*, improving data reliability and consistency. Standardized business terminology across departments, strengthening organizational data culture.
-      - Played a key role in implementing *Docker*, *Rundeck*, and *GitHub Actions* to streamline development workflows. *Guided team members* in adopting new processes through clear documentation and hands-on support.
+      - Played a key role in implementing *Docker*, *Rundeck*, and *GitHub Actions* to streamline Python development workflows. *Guided team members* in adopting new processes through clear documentation and hands-on support.
       - Became the go-to expert for *SAP Business One*, recognized for deep understanding of both business processes and technical implementation. Provided *trusted recommendations* on system configuration, data management, and workflow optimization to support the business.
 
   - line-1: MDF Instruments
@@ -32,7 +32,7 @@ work:
     duration: 4 yrs 5 mos
     highlights: 
       - Managed all *eCommerce data projects* within a small (1-2 person) data team, delivering reports that *informed business decisions*.
-      - Developed and deployed *10+ data pipelines* integrating multiple sources, including web scraping, APIs, and FTP transfers, ensuring *consistent and timely data availability*.
+      - Developed and deployed *10+ Python data pipelines* integrating multiple sources, including web scraping, APIs, and FTP transfers, ensuring *consistent and timely data availability*.
       - Built and maintained *transformed, analytics-ready datasets* for *Power BI*, enabling self-service reporting across the organization.
 
   - line-1: NEC Taiwan
@@ -43,7 +43,7 @@ work:
     duration: 1 yr 9 mos
     highlights: 
       - Developed and maintained the *POS system* for a 400-store retail chain, managing the *complete software development lifecycle* from design and development through deployment and maintenance.
-      - Provided *technical support* to hardware engineers, customer service agents, and end users via remote access and phone, resolving issues efficiently.
+      - Provided *technical support* to hardware engineers, customer service agents, and end users, diagnosing and resolving system issues via remote access and phone.
       - Designed and executed *data migration* from the legacy system to the new platform, completing the transition on schedule.
 
   - line-1: Azion Corporation

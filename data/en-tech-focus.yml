@@ -1,0 +1,76 @@
+personal:
+  name: Stacy (Ko-Han) Lo
+  email: olycats@gmail.com
+  titles:
+    - Integration Developer
+    - Technical Consultant
+  contact-items:
+    location: Taoyuan, Taiwan
+    email: olycats@gmail.com
+    linkedin: linkedin.com/in/olycats
+
+summary: |
+    IT professional with 15 years in *software development*, *IT integration*, and *data engineering*. Experience includes ERP administration, system analysis, data pipelines, and eCommerce solutions. Known for *diving deep* into technical issues, *uncovering root causes* behind complex integration problems. Effective at translating business requirements into *actionable technical implementations*.
+
+work:
+  - line-1: Teamson
+    line-2: Senior Data Engineer (Data & IT Development)
+    location: Taipei, Taiwan
+    start-date: Jul 2022
+    end-date: Sep 2025
+    duration: 3 yrs 3 mos
+    highlights: 
+      - Rebuilt reporting workflows with *Modern Data Stack* using *Stitch Data* for data ingestion and *dbt* for transformation. Owned end-to-end data delivery from *PostgreSQL administration* and *Python pipelines* to *Power BI* and *Tableau* outputs.
+      - Developed and maintained *eCommerce integrations*, automating inventory, order, and shipping workflows. Ensured operational continuity through dedicated technical support and revamped development workflow by adopting *Docker*, *Rundeck*, and *GitHub Actions*.
+      - Became the go-to expert for *SAP Business One*, providing trusted guidance on system features, configuration, and data management with deep understanding of business processes and technical architecture.
+
+  - line-1: MDF Instruments
+    line-2: Data Analyst (Data Engineering & Business Intelligence)
+    location: Taipei, Taiwan (Remote)
+    start-date: Feb 2018
+    end-date: Jun 2022
+    duration: 4 yrs 5 mos
+    highlights: 
+      - Launched *Power BI* for self-service reporting, enabling the eCommerce team to create their own reports.
+      - Developed and deployed *10+ Python data pipelines* integrating multiple sources, including web scraping, APIs, and FTP transfers.
+      - Managed eCommerce data infrastructure including *AWS solutions* and *MySQL databases*.
+
+  - line-1: NEC Taiwan
+    line-2: Programmer (Technical Support & Maintenance)
+    location: Taipei, Taiwan
+    start-date: Mar 2016
+    end-date: Nov 2017
+    duration: 1 yr 9 mos
+    highlights: 
+      - Developed and maintained the *POS system* for a 400-store retail chain, managing the *complete software development lifecycle*.
+      - Provided *technical support* to hardware engineers, customer service agents, and end users, diagnosing and resolving system issues via remote access and phone.
+      - Designed and executed *data migration* from the legacy system to the new platform, completing the transition on schedule.
+
+  - line-1: Azion Corporation
+    line-2: Programmer (Full-Stack Development)
+    location: Taipei, Taiwan
+    start-date: Jun 2014
+    end-date: Mar 2016
+    duration: 1 yr 10 mos
+    highlights: 
+      - Developed e-Loan lending system applications using *ASP.NET web forms (Visual Basic)*.
+      - Worked with *Oracle* and *MS SQL* databases, and front-end technologies including *HTML*, *CSS*, and *JavaScript*.
+      - Participated in multiple phases of the *software development lifecycle*, including development, system analysis, and user acceptance testing.
+
+  - line-1: momo.com Inc.
+    line-2: Data Analyst (Business Analytics & Reporting)
+    location: Taipei, Taiwan
+    start-date: Mar 2011
+    end-date: May 2014
+    duration: 3 yrs 3 mos
+    highlights: 
+      - Analyzed *retail chain performance* including store operations, marketing campaigns, and profitability metrics.
+      - Created and distributed *MS Excel* business reports using *MS Access* and *VBA* scripts to automate reporting workflows.
+      - Built *VBA productivity tools* supporting multiple departments, including Outlook bulk email composer and sales target calculator.
+
+education:
+  - line-1: National Chengchi University
+    line-2: Bachelor's degree in Statistics
+    location: Taipei, Taiwan
+    start-date: Sep 2006
+    end-date: Jan 2011

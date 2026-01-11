@@ -1,9 +1,9 @@
 // Import theme file
 #import "../modules/themes/standard-theme.typ" as theme
-#import "../modules/colors/_default.typ" as color-scheme
+#import "../modules/colors/ubuntu.typ" as color-scheme
 
 // Load YAML data
-#let data = yaml("../data/resume-data-zh.yml")
+#let data = yaml("../data/en-tech-focus.yml")
 
 // Override default configuration
 #let config = (
@@ -13,7 +13,7 @@
     // Override additional configs
     + (
       fonts: (
-        default: "Noto Sans CJK TC",
+        default: "Carlito",
       ),
     )
 )

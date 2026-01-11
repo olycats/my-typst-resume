@@ -352,8 +352,9 @@
 
 // Render document
 #let render-document(data, config) = {
+
   // Document-level show
-  show: doc => document.initpage(doc, config)
+  show: doc => document.initpage(doc, config, set-footer: true)
 
   // Build header
   build-header(
@@ -383,4 +384,3 @@
     config.section-titles.education,
   )
 }
-

@@ -1,9 +1,9 @@
 // Import theme file
 #import "../modules/themes/compact-theme.typ" as theme
-#import "../modules/colors/_default.typ" as color-scheme
+#import "../modules/colors/ubuntu.typ" as color-scheme
 
 // Load YAML data
-#let data = yaml("../data/resume-data-zh.yml")
+#let data = yaml("../data/zh-tech-focus.yml")
 
 // Override default configuration
 #let config = (

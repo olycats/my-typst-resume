@@ -1,4 +1,4 @@
-# my-typst-resume
+# My Typst Resume
 
 My personal resume builder powered by Typst.  
 
@@ -6,12 +6,15 @@ My personal resume builder powered by Typst.
 
 ```sh
 my-typst-resume
-├─ data/ # YAML files containing resume data
-├─ fonts/ # Font Awesome .otf files
-├─ modules/ # Shared .typ modules for reuse
-├─ outputs/ # .typ files to be compiled into PDFs
-├─ pdf/ # Generated PDF files
-└─ build.sh # Shell script to compile .typ files into PDFs
+├─ data/              # YAML files containing resume data
+├─ documents/         # .typ files to be compiled into PDFs
+├─ fonts/             # Font Awesome .otf files
+├─ modules/           # Shared .typ modules for reuse
+│  ├─ colors/         # Color definitions and schemes
+│  ├─ themes/         # Theme configurations
+│  └─ utils/          # Utility functions and helpers
+├─ pdf/               # Generated PDF files
+└─ build.sh           # Shell script to compile .typ files into PDFs
 ```
 
 ## Shell Script Usage
