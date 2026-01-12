@@ -19,7 +19,7 @@ my-typst-resume
 
 ## Shell Script Usage
 
-The `build.sh` script automates the compilation of all `.typ` files in the `outputs/` directory.  
+The `build.sh` script automates the compilation of all `.typ` files in the `documents/` directory.  
 Compiled PDFs are saved in the `pdf/` directory.
 
 ### Steps
